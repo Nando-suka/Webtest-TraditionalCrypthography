@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AES Symmetric Encryption</title>
+    <link rel="stylesheet" href="symmetric-styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>AES Symmetric Encryption</h2>
+        <textarea id="plaintext" placeholder="Enter text to encrypt"></textarea>
+        <input id="secretKey" type="text" placeholder="Enter Secret Key">
+        <div class="button-group">
+            <button onclick="encryptText()">Encrypt</button>
+            <button onclick="decryptText()">Decrypt</button>
+        </div>
+        <textarea id="result" readonly placeholder="Result will appear here"></textarea>
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+    <script src="symmetric-script.js"></script>
+</body>
+</html>
