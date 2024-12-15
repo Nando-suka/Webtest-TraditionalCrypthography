@@ -16,8 +16,36 @@
         </div>
         <textarea id="result" readonly placeholder="Result will appear here"></textarea>
     </div>
+
+    <!--Memisahkan dengan RSA Symmetric Encryption-->
+    <div class="container">
+        <h2>RSA Asymmetric Encryption</h2>
+        
+        <div class="key-container">
+            <div>
+                <h3>Public Key</h3>
+                <textarea id="publicKey" class="key" readonly></textarea>
+            </div>
+            <div>
+                <h3>Private Key</h3>
+                <textarea id="privateKey" class="key" readonly></textarea>
+            </div>
+        </div>
+
+        <button onclick="generateKeys()" class="generate-btn">Generate New Key Pair</button>
+
+        <textarea id="plaintext" placeholder="Enter text to encrypt"></textarea>
+        <div class="button-group">
+            <button onclick="encryptWithPublicKey()">Encrypt</button>
+            <button onclick="decryptWithPrivateKey()">Decrypt</button>
+        </div>
+        
+        <textarea id="result" readonly placeholder="Result will appear here"></textarea>
+    </div>
+
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
     <script src="symmetric-script.js"></script>
+    <script src="rsaasymmetric-script.js"></script>
 </body>
 </html>
